@@ -1,23 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>KotoPlace</title>
-    <style>
-        body { 
-            background-color: #1a1a1a; 
-            color: #ff9e80; 
-            text-align: center; 
-            font-family: sans-serif; 
-            padding-top: 100px; 
-        }
-        h1 { font-size: 3em; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кликер: Космическая энергия</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Привет! ✨</h1>
-    <h1>как у тебя дела?</h1>
-    <h1>заходи в мой тг канал</h1>
-    <h1>t.me/KotoGirl1</h1>
+<div class="game">
+  <header class="hud">
+    <div class="stat">
+      <div class="stat-label">Баланс</div>
+      <div class="stat-value" id="coins">0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">В секунду</div>
+      <div class="stat-value" id="cps">0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Множитель</div>
+      <div class="stat-value" id="mult">x1.0</div>
+    </div>
+  </header>
+
+  <main class="click-area">
+    <button id="clickBtn" class="click-btn" aria-label="Кликнуть">
+      <span class="click-emoji">⚡</span>
+      <span class="click-label">+<span id="clickPower">1</span></span>
+    </button>
+  </main>
+
+  <section class="shop">
+    <h2>Улучшения</h2>
+    <div id="shopList"></div>
+  </section>
+
+  <section class="prestige">
+    <button id="prestigeBtn" disabled>Престиж</button>
+    <div class="prestige-info" id="prestigeInfo"></div>
+  </section>
+</div>
+
+<script src="game.js"></script>
 </body>
 </html>
