@@ -150,3 +150,54 @@ body {
   .stat-value { font-size: 16px; }
   .prestige { flex-direction: column; align-items: stretch; text-align: center; }
 }
+/* ==== Дополнения (существующие стили выше не менялись) ==== */
+.buy-modes { display: flex; gap: 8px; margin-bottom: 10px; }
+.buy-modes button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0ff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.buy-modes button:hover { background: rgba(255, 255, 255, 0.1); }
+.buy-modes button.active { border-color: rgba(138, 43, 226, 0.6); color: #7df9ff; }
+
+.reset-btn {
+  align-self: center;
+  margin-bottom: 20px;
+  padding: 6px 12px;
+  background: none;
+  border: none;
+  color: #e0e0ff;
+  opacity: 0.4;
+  font-size: 12px;
+  cursor: pointer;
+}
+.reset-btn:hover { opacity: 0.8; }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  max-width: calc(100% - 32px);
+  padding: 10px 18px;
+  background: rgba(20, 20, 50, 0.95);
+  border: 1px solid rgba(138, 43, 226, 0.6);
+  border-radius: 10px;
+  color: #7df9ff;
+  font-size: 14px;
+  text-align: center;
+  z-index: 200;
+  animation: toastLife 4.5s ease forwards;
+}
+@keyframes toastLife {
+  0%   { opacity: 0; transform: translate(-50%, 10px); }
+  8%   { opacity: 1; transform: translate(-50%, 0); }
+  85%  { opacity: 1; }
+  100% { opacity: 0; }
+}
