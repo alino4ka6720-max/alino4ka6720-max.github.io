@@ -32,6 +32,11 @@
 
   <section class="shop">
     <h2>Улучшения</h2>
+    <div class="buy-modes" id="buyModes">
+      <button type="button" data-mode="1">x1</button>
+      <button type="button" data-mode="10">x10</button>
+      <button type="button" data-mode="max">Макс</button>
+    </div>
     <div id="shopList"></div>
   </section>
 
@@ -39,6 +44,8 @@
     <button id="prestigeBtn" disabled>Престиж</button>
     <div class="prestige-info" id="prestigeInfo"></div>
   </section>
+
+  <button type="button" id="resetBtn" class="reset-btn">Сбросить сохранение</button>
 </div>
 
 <script src="game.js"></script>
